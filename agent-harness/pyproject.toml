@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["cli_anything/toutiao/tests"]
+addopts = "-ra -m 'not live'"
+markers = [
+    "live: requires a real ego-browser session and access to Toutiao",
+]
